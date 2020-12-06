@@ -12,7 +12,7 @@ function ProductList() {
               <strong>Tabela de Produtos </strong>
             </div>
           </header>
-          <div key="SW" className="content">
+          {/* <div key="SW" className="content">
             <p>
               nome:
               <strong>DEDE</strong>
@@ -24,8 +24,8 @@ function ProductList() {
             <div>
               <button type="button"></button>
             </div>
-          </div>
-
+          </div> */}
+        
           <footer></footer>
         </article>
       </main>
