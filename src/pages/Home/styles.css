@@ -113,7 +113,9 @@
 
   .product-list {
     margin-top: 20px;
-      width: 100%;
+      width: 90%;
+     margin-right: auto;
+     margin-left: auto;
   }
   .container-home{
     display: flex;

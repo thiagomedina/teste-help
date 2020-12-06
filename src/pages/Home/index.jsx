@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProductList from '../../container/ProductList';
+import ProductTable from '../../container/ProductTable';
 import Input from '../../components/Input';
 import PageHeader from '../../components/PageHeader';
 import warningIcon from '../../assets/images/icons/warning.svg';
@@ -45,7 +45,7 @@ function Home() {
       </div>
 
       <div className="product-list">
-        <ProductList />
+        <ProductTable />
       </div>
     </div>
   );

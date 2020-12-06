@@ -9,7 +9,7 @@ function ProductList() {
         <article className="teacher-item">
           <header>
             <div>
-              <strong>Nome do Produto: </strong>
+              <strong>Tabela de Produtos </strong>
             </div>
           </header>
           <div key="SW" className="content">
