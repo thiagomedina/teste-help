@@ -1,13 +1,14 @@
 import React from 'react';
 
 import ProductTable from '../../container/ProductTable';
-import RegisterProduct from '../../container/RegisterProduct';
+import RegisterProductForm from '../../container/RegisterProductForm';
+
 import Input from '../../components/Input';
 import PageHeader from '../../components/PageHeader';
 
 import './styles.css';
 
-function Home() {
+const Home = () => {
   return (
     <div className="container-home">
       <div id="page-product-form" className="container">
@@ -18,7 +19,7 @@ function Home() {
         <div id="search-products" className="container">
           <Input name="search" placeholder="Pesquisar produtos..." />
         </div>
-        <RegisterProduct />
+        <RegisterProductForm />
       </div>
 
       <div className="product-list">
@@ -26,6 +27,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

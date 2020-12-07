@@ -2,7 +2,7 @@ import React from 'react'
 
 import Input from '../../components/Input'
 import warningIcon from '../../assets/images/icons/warning.svg';
-const RegisterProduct = () => {
+const RegisterProductForm = () => {
   return (
     <main>
       <form>
@@ -29,4 +29,4 @@ const RegisterProduct = () => {
     </main>
   );
 };
-export default RegisterProduct;
+export default RegisterProductForm;
