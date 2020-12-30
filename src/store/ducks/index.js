@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux'
+import topTracks from  './topTracks'
 
-
-export default combineReducers({});
+export default combineReducers({topTracks});
