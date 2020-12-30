@@ -7,7 +7,7 @@ import './styles.css';
 const Home = () => {
   return (
     <div className="container-home">
- 
+  <h1>list</h1>
     </div>
   );
 };
