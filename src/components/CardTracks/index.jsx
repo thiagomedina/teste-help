@@ -1,9 +1,12 @@
 import React from 'react';
+import { Container } from './styles';
 
-const CardTracks = () => {
-    return(
-        <p>card tracks</p>
-    )
+const CardTracks = ({song}) => {
+  return (
+    <Container> 
+      <p>{song.title}</p>
+    </Container>
+  );
 };
 
 export default CardTracks;
