@@ -1,15 +1,15 @@
-import { put, call, takeLatest, all } from 'redux-saga/effects';
-import api from '../../services/api'
+import { call, takeLatest, all } from 'redux-saga/effects';
+import api from '../../services/api';
 
 import { Types } from '../ducks/topTracks';
 
 function* getTopTracks(action) {
-    let response = {};
+  let response = {};
   try {
-    // response = yield call(api.get,"/chart")
+    response = yield call(api.get, 'chart');
+
+    console.log(response);
     console.log('aqui')
-    console.log(action)
-    
   } catch (e) {
     console.log(e);
   }
