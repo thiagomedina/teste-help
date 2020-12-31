@@ -25,6 +25,7 @@ const getTopTracksSuccess = (state = INITIAL_STATE, action) => ({
 const getTopTracksFailure = (state = INITIAL_STATE, action) => ({
   ...state,
   getTopTracksLoading: false,
+  data:[...state.data, action.errorMessage]
 });
 
 export default createReducer(INITIAL_STATE, {
