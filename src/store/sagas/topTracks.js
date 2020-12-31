@@ -6,10 +6,9 @@ import { Types } from '../ducks/topTracks';
 function* getTopTracks(action) {
   let response = {};
   try {
-    response = yield call(api.get, 'chart');
+    response = yield call(api.get, 'chart/0/tracks');
 
     console.log(response);
-    console.log('aqui')
   } catch (e) {
     console.log(e);
   }
