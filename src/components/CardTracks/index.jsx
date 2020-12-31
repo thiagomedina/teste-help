@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Image, Info, DurationTrack } from './styles';
 import convertDurationTrack from '../../utils/convertDurationTrack';
 import PlayButton from '../PlayButton';
+import FavoriteButton from '../FavoriteButton';
 const CardTracks = ({ song }) => {
   return (
     <Container>
@@ -14,6 +15,7 @@ const CardTracks = ({ song }) => {
       </Info>
       <DurationTrack>{convertDurationTrack(song.duration)}</DurationTrack>
       <PlayButton url={song.preview} />
+      <FavoriteButton/>
     </Container>
   );
 };
