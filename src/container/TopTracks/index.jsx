@@ -9,6 +9,7 @@ const TopTracks = () => {
   const dispatch = useDispatch();
 
   const tracks = useSelector(state => state.topTracks.data.tracks?.data);
+
   useEffect(() => {
     dispatch(TopTracksActions.getTopTracks({}));
   }, []);

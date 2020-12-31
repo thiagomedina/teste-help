@@ -1,10 +1,18 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, Image, Info, DurationTrack } from './styles';
+import convertDurationTrack from '../../utils/convertDurationTrack';
 
-const CardTracks = ({song}) => {
+const CardTracks = ({ song }) => {
   return (
-    <Container> 
-      <p>{song.title}</p>
+    <Container>
+      <Image>
+        <img src={song.album.cover_small} alt={song.title} />
+      </Image>
+      <Info>
+        <span>{song.title}</span>
+        <p>{song.artist.name}</p>
+      </Info>
+      <DurationTrack>{convertDurationTrack(song.duration)}</DurationTrack>
     </Container>
   );
 };
