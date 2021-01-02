@@ -1,8 +1,9 @@
 import React from 'react';
-import SearchInput from '../../components/SearchInput';
 
 const Search = () => {
-  return <SearchInput />;
+  return (
+    <input></input>
+  )
 };
 
 export default Search;
