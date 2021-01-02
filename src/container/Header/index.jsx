@@ -1,19 +1,12 @@
 import React from 'react';
-import Search from '../Search'
-import { ContainerHeader, HeaderContent, Profile } from './styles';
+import Search from '../Search';
+import { Container } from './styles';
 
 const Header = () => {
   return (
-    <ContainerHeader>
-      <HeaderContent>
-        <Profile>
-          <div>
-            <span>Bem Vindo!</span>
-          </div>
-        </Profile>
-        <Search/>
-      </HeaderContent>
-    </ContainerHeader>
+    <Container>
+      <Search />
+    </Container>
   );
 };
 

@@ -8,7 +8,7 @@ export const Container = styled.div`
   height: 60px;
   border-radius: 8px;
   margin: 2px 0px;
-  background: black;
+  background: #1e1d21;
 `;
 
 export const Image = styled.div`
@@ -32,7 +32,7 @@ export const Info = styled.div`
   }
 
   p {
-    color: red;
+    color: #04d361;
     font-size: 1.3rem;
     margin: 0;
   }
