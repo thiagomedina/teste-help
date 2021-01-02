@@ -1,8 +1,8 @@
 import { all, fork } from 'redux-saga/effects';
-import topTracks from './topTracks';
+import Music from './Music';
 
 export default function* rootSaga() {
   yield all([
-    fork(topTracks)
+    fork(Music)
   ])
 }

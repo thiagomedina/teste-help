@@ -1,7 +1,7 @@
 import { call, takeLatest, all, put } from 'redux-saga/effects';
 import api from '../../services/api';
 
-import { Types } from '../ducks/topTracks';
+import { Types } from '../ducks/Music';
 
 function* getTopTracks(action) {
   let response = {};
