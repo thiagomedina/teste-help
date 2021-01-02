@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiPlay, FiPause } from 'react-icons/fi';
+import { Button } from './styles';
 
 const PlayButton = ({ url }) => {
   const [audio] = useState(new Audio(url));
@@ -19,7 +20,9 @@ const PlayButton = ({ url }) => {
   });
 
   return (
-    <button onClick={handlePlay}>{playing ? <FiPause /> : <FiPlay />}</button>
+    <Button onClick={handlePlay}>
+      {playing ? <FiPause /> : <FiPlay />}
+    </Button>
   );
 };
 

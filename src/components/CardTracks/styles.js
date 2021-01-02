@@ -5,16 +5,16 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 80px;
   border-radius: 8px;
-  margin: 2px 0px;
+  margin: 5px 0px;
   background: #1e1d21;
 `;
 
 export const Image = styled.div`
-  margin: 10px 20px;
-  border-radius: 5px;
   overflow: hidden;
+  display: flex;
+  margin: 0px 10px;
 
   img {
     width: 100%;
@@ -40,8 +40,12 @@ export const Info = styled.div`
 
 export const DurationTrack = styled.p`
   position: absolute;
-  right: 125px;
+  right: 125px; 
   min-width: 45px;
   margin: 0;
   font-size: 1.3rem;
+`;
+
+export const Buttons = styles.div`
+
 `;
