@@ -4,7 +4,7 @@ export const Form = styled.form`
   display: flex;
   input {
     flex: 1;
-    height: 50px;
+    height: 40px;
     padding: 0 24px;
     border: 0;
     border-radius: 5px 0 0 5px;
@@ -13,7 +13,7 @@ export const Form = styled.form`
     border-right: 0;
   }
   button {
-    height: 50px;
+    height: 40px;
     background: #04d361;
     border-radius: 0 5px 5px 0;
     border: 0;
@@ -27,7 +27,9 @@ export const Form = styled.form`
     svg {
       height: 25px;
       width: 25px;
-      margin: 0 10px;
+      margin: 0px 10px;
+      margin-top: 5px;
+      
     }
   }
 `;

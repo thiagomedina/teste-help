@@ -1,11 +1,17 @@
 import React from 'react';
+import { FiArchive } from 'react-icons/fi';
+
 import Search from '../Search';
-import { Container } from './styles';
+import { Container, Favorites } from './styles';
 
 const Header = () => {
   return (
     <Container>
       <Search />
+      <Favorites>
+        Sua Biblioteca
+        <FiArchive />
+      </Favorites>
     </Container>
   );
 };

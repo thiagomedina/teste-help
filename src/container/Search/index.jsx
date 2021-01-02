@@ -4,7 +4,7 @@ import { FiSearch } from 'react-icons/fi';
 const Search = () => {
   return (
     <Form>
-      <input placeholder="Digite " />
+      <input placeholder="Pesquisar..." />
       <button type="submit">
         <FiSearch />
       </button>
