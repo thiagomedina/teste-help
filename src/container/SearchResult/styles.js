@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerAlbums = styled.div`
+export const ContentAlbums = styled.div`
   display: flex;
   justify-content: space-around;
 

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import CardTracks from '../../components/CardTracks';
 import CardAlbum from '../../components/CardAlbum';
 
-import { ContainerAlbums } from './styles';
+import { ContentAlbums } from './styles';
 
 const SearchResult = () => {
   const { album, track } = useSelector(state => state.Music.searchResult);
@@ -12,7 +12,6 @@ const SearchResult = () => {
   const Tracks = () => {
     return (
       <>
-        <h1>Músicas</h1>
         {track?.map(item => (
           <CardTracks key={item.id} song={item} />
         ))}
@@ -23,7 +22,6 @@ const SearchResult = () => {
   const Albums = () => {
     return (
       <>
-        
         {album?.map(item => (
           <CardAlbum key={item.id} album={item} />
         ))}
@@ -33,12 +31,12 @@ const SearchResult = () => {
 
   return (
     <>
+      <h1>Músicas</h1>
       <Tracks />
-      <h1>Albuns</h1>
-      <ContainerAlbums>
+      <h1>Álbuns</h1>
+      <ContentAlbums>
         <Albums />
-      </ContainerAlbums>
-      {console.log(album)}
+      </ContentAlbums>
     </>
   );
 };
