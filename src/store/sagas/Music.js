@@ -15,7 +15,35 @@ function* getTopTracks(action) {
 }
 
 function* search(action) {
-  console.log(action)
+  let response = {};
+
+  try {
+    const artist = yield call(
+      api.get,
+      `/search/artist?q=${action.payload.query}&limit=3`,
+    );
+
+    const album = yield call(
+      api.get,
+      `/search/album?q=${action.payload.query}&limit=3`,
+    );
+
+    const track = yield call(
+      api.get,
+      `/search/track?q=${action.payload.query}&limit=3`,
+    );
+
+    response = {
+      artist: artist.data.data,
+      album: album.data.data,
+      track: track.data.data,
+    };
+
+    yield put({ type: Types.SEARCH_SUCCESS, payload: response });
+  } catch (e) {
+    console.log(e);
+    yield put({ type: Types.SEARCH_FAILURE, errorMessage: 'error' });
+  }
 }
 
 export default function* () {
