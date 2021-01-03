@@ -20,17 +20,17 @@ function* search(action) {
   try {
     const artist = yield call(
       api.get,
-      `/search/artist?q=${action.payload.query}&limit=3`,
+      `/search/artist?q=${action.payload.query}&limit=10`,
     );
 
     const album = yield call(
       api.get,
-      `/search/album?q=${action.payload.query}&limit=3`,
+      `/search/album?q=${action.payload.query}&limit=10`,
     );
 
     const track = yield call(
       api.get,
-      `/search/track?q=${action.payload.query}&limit=3`,
+      `/search/track?q=${action.payload.query}&limit=10`,
     );
 
     response = {
