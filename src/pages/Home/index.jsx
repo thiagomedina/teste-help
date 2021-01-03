@@ -4,8 +4,9 @@ import { useSelector } from 'react-redux';
 import Header from '../../container/Header';
 import SearchResult from '../../container/SearchResult';
 import Load from '../../components/Loading';
-import { Container } from './styles';
 import TopTracks from '../../container/TopTracks';
+
+import { Container } from './styles';
 
 const Home = () => {
   const searchResults = useSelector(state => state.Music.searchResult);
