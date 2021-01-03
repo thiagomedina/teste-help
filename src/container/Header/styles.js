@@ -6,11 +6,14 @@ export const Container = styled.header`
   background: #28262e;
   display: flex;
   align-items: center;
-  /* justify-content: space-around; */
 
   ${Search} {
-    /* margin: auto; */
     margin: 0px 20px;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: flex-end;
   }
 `;
 
@@ -22,14 +25,17 @@ export const Favorites = styled.button`
   align-items: center;
   font-weight: 600;
   margin-left: auto;
-  svg{
+  svg {
     margin-left: 5px;
-    height:20px;
+    height: 20px;
     width: 20px;
   }
 
-  &:hover{
+  &:hover {
     color: #fff;
+  }
 
+  @media (max-width: 800px) {
+    margin: 15px 8px -15px auto;
   }
 `;

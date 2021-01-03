@@ -14,6 +14,13 @@ function* getTopTracks(action) {
   }
 }
 
+function* search(action) {
+  console.log(action)
+}
+
 export default function* () {
-  yield all([takeLatest(Types.GET_TOP_TRACKS, getTopTracks)]);
+  yield all([
+    takeLatest(Types.GET_TOP_TRACKS, getTopTracks),
+    takeLatest(Types.SEARCH, search),
+  ]);
 }

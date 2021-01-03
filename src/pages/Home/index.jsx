@@ -7,9 +7,7 @@ const Home = () => {
   return (
     <Container>
       <Header />
-      
       <TopTracksContainer />
-     
     </Container>
   );
 };

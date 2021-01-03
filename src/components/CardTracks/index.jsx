@@ -2,7 +2,7 @@ import React from 'react';
 import convertDurationTrack from '../../utils/convertDurationTrack';
 import PlayButton from '../PlayButton';
 import FavoriteButton from '../FavoriteButton';
-import { Buttons, Container, Image, Info, DurationTrack } from './styles';
+import { Buttons, Container, Image, Info } from './styles';
 
 const CardTracks = ({ song }) => {
   return (
