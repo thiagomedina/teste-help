@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import load from '../../assets/bars.svg';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-import TopTracksContainer from '../../container/TopTracks';
 import Header from '../../container/Header';
 import SearchResult from '../../container/SearchResult';
 import Load from '../../components/Loading';
 import { Container } from './styles';
+import TopTracks from '../../container/TopTracks';
+
 const Home = () => {
   const searchResults = useSelector(state => state.Music.searchResult);
   const loading = useSelector(state => state.Music.loading);
   return (
     <Container>
       <Header />
-      <Load />
-      {console.log(searchResults)}
-      {console.log(loading)}
-      {!!searchResults.length ? <SearchResult /> : <TopTracksContainer />}
+      {
+        {
+          ['true']: <Load />,
+          ['false']: !!searchResults.artist ? <SearchResult /> : <TopTracks />,
+        }[loading]
+      }
     </Container>
   );
 };
