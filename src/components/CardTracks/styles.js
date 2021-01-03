@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { Button as PlayButton } from '../PlayButton/styles';
 
 export const Container = styled.div`
-  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -9,6 +9,8 @@ export const Container = styled.div`
   border-radius: 8px;
   margin: 5px 0px;
   background: #1e1d21;
+
+  max-width: 1100px;
 `;
 
 export const Image = styled.div`
@@ -38,14 +40,13 @@ export const Info = styled.div`
   }
 `;
 
-export const DurationTrack = styled.p`
-  position: absolute;
-  right: 125px; 
-  min-width: 45px;
-  margin: 0;
-  font-size: 1.3rem;
-`;
+export const Buttons = styled.div`
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+  align-items: center;
 
-export const Buttons = styles.div`
-
+  ${PlayButton} {
+    margin: 0px 10px;
+  }
 `;

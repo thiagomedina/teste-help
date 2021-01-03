@@ -17,7 +17,7 @@ const TopTracks = () => {
   return (
     <Container>
       <h1>Músicas Populares</h1>
-      <hr />
+
       {/* {tracks && tracks?.map(item => <CardTracks key={item.id} song={item} />)} */}
       {mock?.map(item => (
         <CardTracks key={item.id} song={item} />

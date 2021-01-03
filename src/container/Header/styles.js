@@ -6,21 +6,22 @@ export const Container = styled.header`
   background: #28262e;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 
   ${Search} {
-    margin: auto;
+    /* margin: auto; */
+    margin: 0px 20px;
   }
 `;
 
 export const Favorites = styled.button`
   margin-right: 60px;
-
   background: none;
   border: 0;
   color: #cccccc;
   align-items: center;
   font-weight: 600;
+  margin-left: auto;
   svg{
     margin-left: 5px;
     height:20px;
