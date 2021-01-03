@@ -38,7 +38,7 @@ function* search(action) {
       album: album.data.data,
       track: track.data.data,
     };
-
+    
     yield put({ type: Types.SEARCH_SUCCESS, payload: response });
   } catch (e) {
     console.log(e);

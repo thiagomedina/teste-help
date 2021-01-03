@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Form as Search } from '../Search/styles';
+import { Form as Search } from '../../components/Search/styles';
 
 export const Container = styled.header`
   padding: 30px 0;

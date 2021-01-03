@@ -11,7 +11,7 @@ export const { Types, Creators } = createActions({
 
 const INITIAL_STATE = {
   data: [],
-  filter: [],
+  searchResult: [],
   loading: false,
 };
 
@@ -39,12 +39,12 @@ const search = (state = INITIAL_STATE, action) => ({
 const searchSuccess = (state = INITIAL_STATE, action) => ({
   ...state,
   loading: false,
-  data: action.payload,
+  searchResult: action.payload,
 });
 const searchFailure = (state = INITIAL_STATE, action) => ({
   ...state,
   loading: false,
-  data: [...state.data, action.errorMessage],
+  searchResult: [...state.data, action.errorMessage],
 });
 
 export default createReducer(INITIAL_STATE, {

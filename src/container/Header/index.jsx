@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiArchive } from 'react-icons/fi';
 
-import Search from '../Search';
+import Search from '../../components/Search';
 import { Container, Favorites } from './styles';
 
 const Header = () => {
