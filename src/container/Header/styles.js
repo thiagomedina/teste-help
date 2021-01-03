@@ -21,14 +21,19 @@ export const Favorites = styled.button`
   margin-right: 60px;
   background: none;
   border: 0;
-  color: #cccccc;
   align-items: center;
   font-weight: 600;
   margin-left: auto;
+
+  a {
+    text-decoration: none;
+    color: #cccccc;
+  }
   svg {
     margin-left: 5px;
     height: 20px;
     width: 20px;
+    color: #cccccc;
   }
 
   &:hover {

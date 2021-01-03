@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiArchive } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import Search from '../../components/Search';
 import { Container, Favorites } from './styles';
@@ -9,8 +10,10 @@ const Header = () => {
     <Container>
       <Search />
       <Favorites>
-        Sua Biblioteca
-        <FiArchive />
+        <Link to='/favorites'>
+          Sua Biblioteca
+          <FiArchive />
+        </Link>
       </Favorites>
     </Container>
   );
