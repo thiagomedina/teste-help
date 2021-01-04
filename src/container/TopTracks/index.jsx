@@ -1,17 +1,8 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
 
-import { Creators as MusicActions } from '../../store/ducks/Music';
 import CardTracks from '../../components/CardTracks';
 import { Container } from './styles';
-const TopTracks = () => {
-  const dispatch = useDispatch();
-
-  const tracks = useSelector(state => state.Music.data);
-  useEffect(() => {
-    dispatch(MusicActions.getTopTracks({}));
-  }, []);
-
+const TopTracks = ({ tracks }) => {
   return (
     <Container>
       <h1>Músicas Populares</h1>

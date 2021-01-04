@@ -3,7 +3,7 @@ import api from '../../services/api';
 
 import { Types } from '../ducks/Music';
 
-function* getTopTracks(action) {
+function* getTopTracks() {
   let response = {};
   try {
     response = yield call(api.get, 'chart/0');
