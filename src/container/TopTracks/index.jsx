@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+// import { useSelector, useDispatch } from 'react-redux';
 import fakeapi from '../../fakeapi.json';
 
-import { Creators as MusicActions } from '../../store/ducks/Music';
+// import { Creators as MusicActions } from '../../store/ducks/Music';
 import CardTracks from '../../components/CardTracks';
 import { Container } from './styles';
 const TopTracks = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const tracks = useSelector(state => state.Music.data);
+  // const tracks = useSelector(state => state.Music.data);
   const mock = fakeapi.tracks.data;
   useEffect(() => {
     // dispatch(MusicActions.getTopTracks({}));

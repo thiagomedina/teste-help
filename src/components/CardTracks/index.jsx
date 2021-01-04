@@ -17,7 +17,7 @@ const CardTracks = ({ song }) => {
       <Buttons>
         <div>{convertDurationTrack(song.duration)}</div>
         <PlayButton url={song.preview} />
-        <FavoriteButton />
+        <FavoriteButton track={song}/>
       </Buttons>
     </Container>
   );

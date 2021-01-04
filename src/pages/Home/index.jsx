@@ -17,8 +17,8 @@ const Home = () => {
       <Header />
       {
         {
-          ['true']: <Load />,
-          ['false']: !!searchResults.artist ? <SearchResult /> : <TopTracks />,
+          'true': <Load />,
+          'false': !!searchResults.artist ? <SearchResult /> : <TopTracks />,
         }[loading]
       }
     </Container>

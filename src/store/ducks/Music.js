@@ -7,11 +7,14 @@ export const { Types, Creators } = createActions({
   search: ['payload'],
   searchSuccess: ['payload'],
   searchFailure: ['payload'],
+  addFavorites: ['payload'],
+  removeFavorites: ['payload'],
 });
 
 const INITIAL_STATE = {
   data: [],
   searchResult: [],
+  favorites: [],
   loading: false,
 };
 
@@ -47,6 +50,12 @@ const searchFailure = (state = INITIAL_STATE, action) => ({
   searchResult: [...state.data, action.errorMessage],
 });
 
+const addFavorites = (state = INITIAL_STATE, action) => ({
+  ...state,
+  farorites: action.payload
+
+});
+
 export default createReducer(INITIAL_STATE, {
   [Types.GET_TOP_TRACKS]: getTopTracks,
   [Types.GET_TOP_TRACKS_SUCCESS]: getTopTracksSuccess,
@@ -54,4 +63,5 @@ export default createReducer(INITIAL_STATE, {
   [Types.SEARCH]: search,
   [Types.SEARCH_SUCCESS]: searchSuccess,
   [Types.SEARCH_FAILURE]: searchFailure,
+  [Types.ADD_FAVORITES]: addFavorites
 });

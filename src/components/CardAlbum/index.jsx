@@ -5,7 +5,6 @@ import { Container, Image, Info } from './styles';
 const CardAlbum = ({ album }) => {
   return (
     <Container>
-      {console.log(album)}
       <Image>
         <img src={album.cover_medium} alt={album.title} />
       </Image>
