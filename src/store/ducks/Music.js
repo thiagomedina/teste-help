@@ -52,8 +52,13 @@ const searchFailure = (state = INITIAL_STATE, action) => ({
 
 const addFavorites = (state = INITIAL_STATE, action) => ({
   ...state,
-  farorites: action.payload
+  favorites: [...state.favorites, action.payload],
+});
 
+const removeFavorites = (state = INITIAL_STATE, action) => (
+  console.log(action),{
+  ...state,
+  favorites: [...state.favorites.filter(song => song.track.id !== action.payload)],
 });
 
 export default createReducer(INITIAL_STATE, {
@@ -63,5 +68,6 @@ export default createReducer(INITIAL_STATE, {
   [Types.SEARCH]: search,
   [Types.SEARCH_SUCCESS]: searchSuccess,
   [Types.SEARCH_FAILURE]: searchFailure,
-  [Types.ADD_FAVORITES]: addFavorites
+  [Types.ADD_FAVORITES]: addFavorites,
+  [Types.REMOVE_FAVORITES]: removeFavorites,
 });

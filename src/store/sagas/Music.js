@@ -46,14 +46,9 @@ function* search(action) {
   }
 }
 
-function* addFavorites(action) {
-console.log(action)
-}
-
 export default function* () {
   yield all([
     takeLatest(Types.GET_TOP_TRACKS, getTopTracks),
     takeLatest(Types.SEARCH, search),
-    takeLatest(Types.ADD_FAVORITES, addFavorites),
   ]);
 }
