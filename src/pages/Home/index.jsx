@@ -17,7 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(MusicActions.getTopTracks({}));
-  }, []);
+  }, [dispatch]);
   return (
     <Container>
       <Header />
