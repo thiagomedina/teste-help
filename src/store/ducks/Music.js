@@ -55,10 +55,11 @@ const addFavorites = (state = INITIAL_STATE, action) => ({
   favorites: [...state.favorites, action.payload],
 });
 
-const removeFavorites = (state = INITIAL_STATE, action) => (
-  console.log(action),{
+const removeFavorites = (state = INITIAL_STATE, action) => ({
   ...state,
-  favorites: [...state.favorites.filter(song => song.track.id !== action.payload)],
+  favorites: [
+    ...state.favorites.filter(song => song.track.id !== action.payload),
+  ],
 });
 
 export default createReducer(INITIAL_STATE, {

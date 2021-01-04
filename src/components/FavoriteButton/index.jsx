@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Creators as MusicActions } from '../../store/ducks/Music';
 
@@ -21,7 +21,11 @@ const FavoriteButton = ({ track }) => {
 
   return (
     <FavoritesButton onClick={handleSave}>
-      {save ? <BsFillStarFill /> : <FiStar />}
+      {favorites.find(trackSaved => trackSaved.track.id === track.id) ? (
+        <BsFillStarFill />
+      ) : (
+        <FiStar />
+      )}
     </FavoritesButton>
   );
 };
