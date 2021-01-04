@@ -10,4 +10,3 @@
   $ yarn start # or npm start
 ```
 
-<a>teste-mani.netlify.app/</a>
